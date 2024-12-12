@@ -51,7 +51,7 @@ const AboutUsWhyChooseUsSection = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl transition flex flex-col items-center"
             >
-              <div className="text-blue-600 text-4xl mb-4 text-center">
+              <div className="text-[#080F3B] text-4xl mb-4 text-center">
                 {item.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -62,9 +62,9 @@ const AboutUsWhyChooseUsSection = () => {
           ))}
         </div>
         <div className="flex justify-center mt-5">
-        <button className="mt-5 md:block md:w-auto text-white font-medium bg-[#080F3B] px-8 md:px-14 py-3 md:py-4 hover:bg-[#e99015] transition-colors">
-          CONTACT US
-        </button>
+          <button className="mt-5 md:block md:w-auto text-white font-medium bg-[#080F3B] px-8 md:px-14 py-3 md:py-4 hover:bg-[#e99015] transition-colors">
+            CONTACT US
+          </button>
         </div>
       </div>
     </section>
