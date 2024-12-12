@@ -42,9 +42,6 @@ const AboutUsWhyChooseUsSection = () => {
             Discover what sets us apart and why we're the best choice for your
             glass interior needs.
           </p>
-          <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition">
-            CONTACT US
-          </button>
         </div>
 
         {/* Cards Section */}
@@ -54,13 +51,20 @@ const AboutUsWhyChooseUsSection = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl transition flex flex-col items-center"
             >
-              <div className="text-blue-600 text-4xl mb-4 text-center">{item.icon}</div>
+              <div className="text-blue-600 text-4xl mb-4 text-center">
+                {item.icon}
+              </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {item.title}
               </h3>
               <p className="text-gray-600">{item.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-5">
+        <button className="mt-5 md:block md:w-auto text-white font-medium bg-[#080F3B] px-8 md:px-14 py-3 md:py-4 hover:bg-[#e99015] transition-colors">
+          CONTACT US
+        </button>
         </div>
       </div>
     </section>
