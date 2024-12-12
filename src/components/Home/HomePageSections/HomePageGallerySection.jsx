@@ -37,7 +37,7 @@ const HomePageGallerySection = () => {
           <h1 className="text-4xl font-bold uppercase">Gallery</h1>
           <span className="bg-[#080F3B] w-1/12 h-[2px]"></span>
         </div>
-        <div className="grid grid-cols-4 gap-5 mt-5">
+        <div className="grid grid-cols-4 gap-5 mt-10">
           {gallery.map((images) => {
             return (
               <div

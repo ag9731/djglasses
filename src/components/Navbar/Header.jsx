@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaMobileAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -42,8 +43,12 @@ const Header = () => {
           {/* Navigation menu */}
           <nav>
             <ul className="flex gap-16 uppercase text-white">
-              <li>Home</li>
-              <li>About</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
               <li>Services</li>
               <li>Gallery</li>
               <li>Contact</li>

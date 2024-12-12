@@ -6,6 +6,9 @@ import slide2 from "../../../assets/Home_Page_Banners/slide2.webp";
 import slide3 from "../../../assets/Home_Page_Banners/slide3.webp";
 import slide4 from "../../../assets/Home_Page_Banners/slide4.webp";
 import slide5 from "../../../assets/Home_Page_Banners/slide5.webp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 

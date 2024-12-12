@@ -7,7 +7,15 @@ const HomePageAboutUsSection = () => {
     
   return (
     <section className="container mx-auto">
-      <div className="grid grid-cols-2 ">
+      {/* Upper Section */}
+      <div className="flex flex-col items-center justify-center gap-4">
+        <h1 className="text-4xl font-bold uppercase">About Us</h1>
+        <span className="bg-[#080F3B] w-1/12 h-[2px]"></span>
+      </div>
+
+      {/* Lower Section */}
+
+      <div className="grid grid-cols-2 mt-10">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-4xl uppercase">

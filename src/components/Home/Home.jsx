@@ -4,6 +4,7 @@ import HomePageAboutUsSection from './HomePageSections/HomePageAboutUsSection'
 import HomePageServices from './HomePageSections/HomePageServices'
 import HomeTestimonialSection from './HomePageSections/HomeTestimonialSection'
 import HomePageGallerySection from './HomePageSections/HomePageGallerySection'
+import HomePageCountSection from './HomePageSections/HomePageCountSection'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HomeBannerSection/>
       <HomePageAboutUsSection/>
       <HomePageServices/>
+      <HomePageCountSection/>
       <HomePageGallerySection/>
       <HomeTestimonialSection/>
     </section>
