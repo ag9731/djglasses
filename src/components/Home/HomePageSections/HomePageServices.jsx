@@ -102,31 +102,36 @@ const HomePageServices = () => {
 
       {/* Lower Section */}
       <div>
-        <div className="container mx-auto grid grid-cols-3 gap-16 justify-center items-start mt-10">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 justify-center items-start mt-10">
           {services.map((service, index) => {
             return (
-              <>
-                <div className="flex flex-col justify-start h-full border border-solid rounded-t-xl">
-                  <div>
-                    <img
-                      className="rounded-t-xl"
-                      src={service.serviceImg}
-                      alt=""
-                    />
-                    <div className="flex w-full h-16 items-center justify-center bg-[#080F3B]">
-                      <h1 className="font-bold text-lg uppercase text-center text-white">
-                        {service.serviceName}
-                      </h1>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-4 items-center mt-5 justify-center">
-                    <span className="bg-[#080F3B] w-1/2 h-[2px]"></span>
-                    <div className="flex w-full">
-                      <p className="text-center ">{service.serciceDesc}</p>
-                    </div>
+              <div
+                key={index}
+                className="group flex flex-col justify-start h-full border border-solid rounded-xl overflow-hidden shadow-lg transform transition duration-300  hover:shadow-2xl"
+              >
+                <div className="relative">
+                  {/* Image with Hover Animation */}
+                  <img
+                    className="rounded-t-xl transform transition duration-300  group-hover:-translate-y-2"
+                    src={service.serviceImg}
+                    alt={service.serviceName}
+                  />
+                  {/* Title Background */}
+                  <div className="flex w-full h-16 items-center justify-center bg-[#080F3B]">
+                    <h1 className="font-bold text-lg uppercase text-center text-white">
+                      {service.serviceName}
+                    </h1>
                   </div>
                 </div>
-              </>
+
+                {/* Description */}
+                <div className="flex flex-col gap-4 items-center mt-5 justify-center p-4">
+                  <span className="bg-[#080F3B] w-1/2 h-[2px]"></span>
+                  <div className="flex w-full">
+                    <p className="text-center">{service.serciceDesc}</p>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>

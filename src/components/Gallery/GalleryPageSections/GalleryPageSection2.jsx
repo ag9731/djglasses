@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const HomePageGallerySection = () => {
+const GalleryPageSection2 = () => {
   const gallery = [
     "https://glasswerks.com/wp-content/uploads/2018/06/jumbo_stock-130_by_204.jpg",
     "https://th.bing.com/th/id/OIP.oywJOz55PYqj2cD3bb3r_gHaE8?rs=1&pid=ImgDetMain",
@@ -29,10 +29,10 @@ const HomePageGallerySection = () => {
   return (
     <section className="container mx-auto px-4 py-8">
       <div className="flex flex-col items-center justify-center gap-4 mb-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-center">
+        {/* <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-center">
           Gallery
-        </h1>
-        <span className="bg-[#080F3B] w-20 sm:w-24 md:w-32 h-[2px]"></span>
+        </h1> */}
+        {/* <span className="bg-[#080F3B] w-20 sm:w-24 md:w-32 h-[2px]"></span> */}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {gallery.map((image, index) => (
@@ -56,7 +56,7 @@ const HomePageGallerySection = () => {
       </div>
       <div className="flex items-center justify-center mt-8">
         <button className="text-white font-medium bg-[#080F3B] px-6 sm:px-8 md:px-14 py-2 sm:py-3 md:py-4 hover:bg-[#e99015] transition-colors rounded-md text-sm sm:text-base">
-          Explore More
+          Contact Us
         </button>
       </div>
       {currentIndex !== null && (
@@ -131,4 +131,4 @@ const HomePageGallerySection = () => {
   );
 };
 
-export default HomePageGallerySection;
+export default GalleryPageSection2;

@@ -3,6 +3,7 @@ import AboutUsPageBannerSection from './AboutUsPageSections/AboutUsPageBannerSec
 import AboutUsPageSection2 from './AboutUsPageSections/AboutUsPageSection2'
 import AboutUsMissionVission from './AboutUsPageSections/AboutUsMissionVission'
 import AboutUsWhyChooseUsSection from './AboutUsPageSections/AboutUsWhyChooseUsSection'
+import AboutUsOurProcess from './AboutUsPageSections/AboutUsOurProcess'
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
         <AboutUsPageSection2/>
         <AboutUsMissionVission/>
         <AboutUsWhyChooseUsSection/>
+        <AboutUsOurProcess/>
     </section>
   )
 }

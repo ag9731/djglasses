@@ -49,15 +49,17 @@ const AboutUsWhyChooseUsSection = () => {
           {array.map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl transition flex flex-col items-center"
+              className="bg-[#080F3B] shadow-lg rounded-lg p-6 text-center hover:shadow-xl transition flex flex-col items-center hover:bg-[#fff] group"
             >
-              <div className="text-[#080F3B] text-4xl mb-4 text-center">
+              <div className="text-white text-4xl mb-4 group-hover:text-[#080F3B]">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#080F3B]">
                 {item.title}
               </h3>
-              <p className="text-gray-600">{item.desc}</p>
+              <p className="text-white group-hover:text-[#080F3B]">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

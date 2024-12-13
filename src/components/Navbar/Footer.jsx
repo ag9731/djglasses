@@ -19,11 +19,11 @@ const Footer = () => {
         <div className="flex flex-col">
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
           <ul>
-            <li className="mb-2">Home</li>
-            <li className="mb-2">About</li>
-            <li className="mb-2">Services</li>
-            <li className="mb-2">Gallery</li>
-            <li className="mb-2">Contact</li>
+            <li className="mb-2 list-disc">Home</li>
+            <li className="mb-2 list-disc">About</li>
+            <li className="mb-2 list-disc">Services</li>
+            <li className="mb-2 list-disc">Gallery</li>
+            <li className="mb-2 list-disc">Contact</li>
           </ul>
         </div>
 
@@ -31,11 +31,11 @@ const Footer = () => {
         <div className="flex flex-col">
           <h3 className="text-xl font-bold mb-4">Services</h3>
           <ul>
-            <li className="mb-2">LED Touch Sensor Mirror</li>
-            <li className="mb-2">SS Glass Railing Work</li>
-            <li className="mb-2">Spider Glazing Work</li>
-            <li className="mb-2">UPVC Windows and Doors</li>
-            <li className="mb-2">More</li>
+            <li className="mb-2 list-disc">LED Touch Sensor Mirror</li>
+            <li className="mb-2 list-disc">SS Glass Railing Work</li>
+            <li className="mb-2 list-disc">Spider Glazing Work</li>
+            <li className="mb-2 list-disc">UPVC Windows and Doors</li>
+            <li className="mb-2 list-disc">More</li>
           </ul>
         </div>
 
