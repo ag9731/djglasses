@@ -66,7 +66,7 @@ const Header = () => {
               <div
                 onMouseEnter={handlMouseEnter}
                 onMouseLeave={handleMouseLeave}
-
+                className="navbar1"
               >
                 <div className="flex items-center gap-2 group relative">
                   <li className="group-hover:transition">Services</li>
@@ -80,7 +80,7 @@ const Header = () => {
                     className="dropdown absolute bg-white shadow-2xl w-[300px] px-2 py-3 rounded-lg"
                     onMouseEnter={handlMouseEnter}
                   >
-                    <ul className="text-black flex flex-col gap-1">
+                    <ul className="text-black flex flex-col gap-1 navul">
                       <li className="cursor-pointer border-b-2">
                         Profile Toughened Glass Partition Work
                       </li>
