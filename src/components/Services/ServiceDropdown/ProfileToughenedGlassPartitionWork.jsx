@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "../../../assets/About_Us/djglassaboutusBannerimage.webp";
+import bgImg from "../../../assets/Profile-Tougehned-Glass-Partition/profile_toughned_glass_parttionBG.webp";
 import profileGlass1 from "../../../assets/Profile-Tougehned-Glass-Partition/partitionGlass1.webp";
 import profileGlass2 from "../../../assets/Profile-Tougehned-Glass-Partition/partitionGlass2.webp";
 import profileGlass3 from "../../../assets/Profile-Tougehned-Glass-Partition/partitionGlass3.webp";

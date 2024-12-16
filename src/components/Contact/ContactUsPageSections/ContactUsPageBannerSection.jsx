@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from "../../../assets/About_Us/djglassaboutusBannerimage.webp";
+import bgImg from "../../../assets/Contact_Us/contactusBG.webp";
 
 const ContactUsPageBannerSection = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from "../../../assets/About_Us/djglassaboutusBannerimage.webp";
+import bgImg from "../../../assets/LED_Glass_Partition/ledtouchsensorBG.webp";
 import profileGlass1 from "../../../assets/LED_Glass_Partition/LED_Glass_Partition1.webp";
 import profileGlass2 from "../../../assets/LED_Glass_Partition/LED_Glass_Partition2.webp";
 import profileGlass3 from "../../../assets/LED_Glass_Partition/LED_Glass_Partition3.webp";
