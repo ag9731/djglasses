@@ -4,13 +4,15 @@ import bgImg from "../../../assets/About_Us/djglassaboutusBannerimage.webp";
 const AboutUsPageBannerSection = () => {
   return (
     <section
-      className="bg-center bg-cover relative bg-repeat h-[40vh]"
+      className="bg-center bg-cover bg-no-repeat relative h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]"
       style={{
         backgroundImage: `url(${bgImg})`,
       }}
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-45 flex items-center justify-center">
-        <h1 className="text-white text-3xl md:text-5xl font-bold z-50">About Us</h1>
+      <div className="absolute inset-0 bg-black bg-opacity-45 flex items-center justify-center p-4">
+        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          About Us
+        </h1>
       </div>
     </section>
   );

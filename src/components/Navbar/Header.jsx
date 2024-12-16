@@ -10,10 +10,13 @@ import {
 } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import "./Header.css"
+import "./Header.css";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [display,setDisplay] = useState(false);
+
+  
 
   const handlMouseEnter = () => {
     setToggle(true);
@@ -69,8 +72,17 @@ const Header = () => {
                 className="navbar1"
               >
                 <div className="flex items-center gap-2 group relative">
-                  <li className="group-hover:transition">Services</li>
-                  <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
+                  <li className="group-hover:transition cursor-pointer">
+                    Services
+                  </li>
+
+                  {/* <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180"/> */}
+                  <FaAngleDown
+                    className={`${
+                      toggle ? "iconUp" : "iconDown"
+                    } cursor-pointer `}
+                    onMouseOver={() => handlMouseEnter(!toggle)}
+                  />
                 </div>
 
                 {/* Dropdown Items */}
@@ -81,37 +93,66 @@ const Header = () => {
                     onMouseEnter={handlMouseEnter}
                   >
                     <ul className="text-black flex flex-col gap-1 navul">
-                      <li className="cursor-pointer border-b-2">
-                        Profile Toughened Glass Partition Work
+                      <li
+                        className="cursor-pointer border-b-2 hover:bg-slate-100"
+                        
+                      >
+                        <Link to="/services/profile-toughened-glass-partition-work">
+                          Profile Toughened Glass Partition
+                        </Link>
+                        Work
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Toughened Glass Partition Work
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/toughened-glass-partition-work">
+                          Toughened Glass Partition Work
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        LED Touch sensor Mirror
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/led-touch-sensor-mirror">
+                          LED Touch sensor Mirror
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        UPVC Windows and Doors
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/upvc-windows-and-doors">
+                          UPVC Windows and Doors
+                        </Link>
                       </li>
-                      <li className="cursor-pointer ">SS Glass Railing Work</li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Skylight Glass / Paragola Work
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/ss-glass-railing-work">
+                          SS Glass Railing Work
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        MS Gate and Fabrication Work
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/skylight-glass-paragola-work">
+                          Skylight Glass / Paragola Work
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">Spider Glazing Work</li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Shower Glass Partition - Sliding Partition
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/ms-gate-and-fabrication-work">
+                          MS Gate and Fabrication Work
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Shower Glass Partition - Sliding Partition
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/spider-glazing-work">
+                          Spider Glazing Work
+                        </Link>
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Shower Glass Partition - Openable
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/shower-glass-partition-sliding">
+                          Shower Glass Partition - Sliding
+                        </Link>
+                        Partition
                       </li>
-                      <li className="cursor-pointer border-b-2 ">
-                        Walk-In Shower Glass Partition
+
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/shower-glass-partition-openable">
+                          Shower Glass Partition - Openable
+                        </Link>
+                      </li>
+                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
+                        <Link to="/services/walk-in-shower-glass-partition">
+                          Walk-In Shower Glass Partition
+                        </Link>
                       </li>
                     </ul>
                   </div>
