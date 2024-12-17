@@ -8,6 +8,8 @@ import slide4 from "../../../assets/Home_Page_Banners/slide4.webp";
 import slide5 from "../../../assets/Home_Page_Banners/slide5.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
+
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -75,9 +77,11 @@ const HomeBannerSection = () => {
                 {item.title}
               </h1>
               <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                <button className="mt-10 hidden md:block md:w-auto text-black font-medium bg-[#fea116] px-8 md:px-14 py-3 md:py-4 hover:bg-[#e99015] transition-colors">
-                  Contact
-                </button>
+                <Link to="/contact">
+                  <button className="mt-10 hidden md:block md:w-auto text-black font-medium bg-[#fea116] px-8 md:px-14 py-3 md:py-4 hover:bg-[#e99015] transition-colors">
+                    Contact
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
