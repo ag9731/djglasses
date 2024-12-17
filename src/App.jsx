@@ -18,6 +18,7 @@ import ShowerGlassPartitionOpenable from "./components/Services/ServiceDropdown/
 import WalkInShowerGlassPartition from "./components/Services/ServiceDropdown/WalkInShowerGlassPartition";
 import ShowerGlassPartitionSlidingPartition from "./components/Services/ServiceDropdown/ShowerGlassPartitionSlidingPartition";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingSocialMedia from "./components/FloatingSocialMedia";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         </div>
         <Footer />
       </Router>
+      <FloatingSocialMedia/>
     </>
   );
 }

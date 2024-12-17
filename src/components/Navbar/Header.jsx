@@ -69,7 +69,7 @@ const Header = () => {
         <div className="text-white flex flex-col md:flex-row gap-5 items-center">
           <div className="flex items-center gap-2 md:gap-5">
             <FaEnvelope />
-            <h1 className="text-sm md:text-base">djglass@gmail.com</h1>
+            <h1 className="text-sm md:text-base">Info@djglass.in</h1>
           </div>
           {/* Divider */}
           <span className="hidden md:block w-[1px] h-6 bg-yellow-400"></span>
