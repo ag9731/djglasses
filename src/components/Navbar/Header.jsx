@@ -7,169 +7,218 @@ import {
   FaWhatsappSquare,
   FaEnvelope,
   FaMobileAlt,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
-  const [display,setDisplay] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
-  
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleServices = () => setServicesOpen(!servicesOpen);
 
-  const handlMouseEnter = () => {
-    setToggle(true);
-  };
-
-  const handleMouseLeave = () => {
-    setToggle(false);
-  };
+  const services = [
+    {
+      title: "Profile Toughened Glass Partition Work",
+      path: "/services/profile-toughened-glass-partition-work",
+    },
+    {
+      title: "Toughened Glass Partition Work",
+      path: "/services/toughened-glass-partition-work",
+    },
+    {
+      title: "LED Touch sensor Mirror",
+      path: "/services/led-touch-sensor-mirror",
+    },
+    {
+      title: "UPVC Windows and Doors",
+      path: "/services/upvc-windows-and-doors",
+    },
+    { title: "SS Glass Railing Work", path: "/services/ss-glass-railing-work" },
+    {
+      title: "Skylight Glass / Paragola Work",
+      path: "/services/skylight-glass-paragola-work",
+    },
+    {
+      title: "MS Gate and Fabrication Work",
+      path: "/services/ms-gate-and-fabrication-work",
+    },
+    { title: "Spider Glazing Work", path: "/services/spider-glazing-work" },
+    {
+      title: "Shower Glass Partition - Sliding",
+      path: "/services/shower-glass-partition-sliding",
+    },
+    {
+      title: "Shower Glass Partition - Openable",
+      path: "/services/shower-glass-partition-openable",
+    },
+    {
+      title: "Walk-In Shower Glass Partition",
+      path: "/services/walk-in-shower-glass-partition",
+    },
+  ];
 
   return (
     <main className="bg-[#292929]">
-      <section className="py-4 container mx-auto flex items-center justify-between">
-        <div className="text-white flex gap-5">
-          <div className="flex items-center gap-5">
+      <section className="py-4 container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+        {/* Contact Info */}
+        <div className="text-white flex flex-col md:flex-row gap-5 items-center">
+          <div className="flex items-center gap-2 md:gap-5">
             <FaEnvelope />
-            <h1>djglass@gmail.com</h1>
+            <h1 className="text-sm md:text-base">djglass@gmail.com</h1>
           </div>
-          <span className="w-[1px] h-6 bg-yellow-400"></span>
-          <div className="flex items-center gap-5">
+          {/* Divider */}
+          <span className="hidden md:block w-[1px] h-6 bg-yellow-400"></span>
+          <div className="flex items-center gap-2 md:gap-5">
             <FaMobileAlt />
-            <h1>Call Us: +91 93801 28840</h1>
+            <h1 className="text-sm md:text-base">Call Us: +91 93801 28840</h1>
           </div>
         </div>
-        <div className="flex gap-5">
-          <FaFacebook className="fill-white" />
-          <FaInstagramSquare className="fill-white" />
-          <FaWhatsappSquare className="fill-white" />
-          <FaTwitterSquare className="fill-white" />
+
+        {/* Social Media Icons */}
+        <div className="flex gap-4 justify-center md:justify-start">
+          <FaFacebook className="fill-white w-6 h-6" />
+          <FaInstagramSquare className="fill-white w-6 h-6" />
+          <FaWhatsappSquare className="fill-white w-6 h-6" />
+          <FaTwitterSquare className="fill-white w-6 h-6" />
         </div>
       </section>
 
-      <header className="bg-[#080F3B] flex">
-        <section className="container mx-auto flex justify-between items-center">
-          {/* Logo */}
-          <figure>
-            <img src={logo} alt="DJ Glasses Logo" />
-          </figure>
+      <header className="bg-[#080F3B] w-full">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
+            {/* Logo */}
+            <figure>
+              <img src={logo} alt="DJ Glasses Logo" className="h-12 md:h-16" />
+            </figure>
 
-          {/* Navigation menu */}
-          <nav>
-            <ul className="flex gap-16 uppercase text-white">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-
-              {/* Services Dropdown Menu */}
-              <div
-                onMouseEnter={handlMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className="navbar1"
-              >
-                <div className="flex items-center gap-2 group relative">
-                  <li className="group-hover:transition cursor-pointer">
-                    Services
-                  </li>
-
-                  {/* <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180"/> */}
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              <Link to="/" className="text-white hover:text-[#fea116]">
+                Home
+              </Link>
+              <Link to="/about" className="text-white hover:text-[#fea116]">
+                About
+              </Link>
+              <div className="relative group">
+                <button
+                  className="text-white hover:text-[#fea116] flex items-center"
+                  onClick={toggleServices}
+                >
+                  Services
                   <FaAngleDown
-                    className={`${
-                      toggle ? "iconUp" : "iconDown"
-                    } cursor-pointer `}
-                    onMouseOver={() => handlMouseEnter(!toggle)}
+                    className={`ml-1 transition-transform duration-200 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
                   />
-                </div>
-
-                {/* Dropdown Items */}
-
-                {toggle ? (
-                  <div
-                    className="dropdown absolute bg-white shadow-2xl w-[300px] px-2 py-3 rounded-lg"
-                    onMouseEnter={handlMouseEnter}
-                  >
-                    <ul className="text-black flex flex-col gap-1 navul">
-                      <li
-                        className="cursor-pointer border-b-2 hover:bg-slate-100"
-                        
+                </button>
+                {servicesOpen && (
+                  <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-10">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={() => setServicesOpen(false)}
                       >
-                        <Link to="/services/profile-toughened-glass-partition-work">
-                          Profile Toughened Glass Partition
-                        </Link>
-                        Work
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/toughened-glass-partition-work">
-                          Toughened Glass Partition Work
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/led-touch-sensor-mirror">
-                          LED Touch sensor Mirror
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/upvc-windows-and-doors">
-                          UPVC Windows and Doors
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/ss-glass-railing-work">
-                          SS Glass Railing Work
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/skylight-glass-paragola-work">
-                          Skylight Glass / Paragola Work
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/ms-gate-and-fabrication-work">
-                          MS Gate and Fabrication Work
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/spider-glazing-work">
-                          Spider Glazing Work
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/shower-glass-partition-sliding">
-                          Shower Glass Partition - Sliding
-                        </Link>
-                        Partition
-                      </li>
-
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/shower-glass-partition-openable">
-                          Shower Glass Partition - Openable
-                        </Link>
-                      </li>
-                      <li className="cursor-pointer border-b-2 hover:bg-slate-100">
-                        <Link to="/services/walk-in-shower-glass-partition">
-                          Walk-In Shower Glass Partition
-                        </Link>
-                      </li>
-                    </ul>
+                        {service.title}
+                      </Link>
+                    ))}
                   </div>
-                ) : (
-                  handleMouseLeave
                 )}
               </div>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </section>
+              <Link to="/gallery" className="text-white hover:text-[#fea116]">
+                Gallery
+              </Link>
+              <Link to="/contact" className="text-white hover:text-[#fea116]">
+                Contact
+              </Link>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button className="lg:hidden text-white" onClick={toggleMenu}>
+              {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {menuOpen && (
+            <nav className="lg:hidden pb-4">
+              <Link
+                to="/"
+                className="block py-2 text-white"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block py-2 text-white"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+              <div>
+                <button
+                  className="flex items-center justify-between w-full py-2 text-white"
+                  onClick={toggleServices}
+                >
+                  Services
+                  <FaAngleDown
+                    className={`transition-transform duration-200 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {servicesOpen && (
+                  <div className="pl-4">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.path}
+                        className="block py-2 text-sm text-gray-300 hover:text-white"
+                        onClick={() => {
+                          setServicesOpen(false);
+                          setMenuOpen(false);
+                        }}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <Link
+                to="/gallery"
+                className="block py-2 text-white"
+                onClick={toggleMenu}
+              >
+                Gallery
+              </Link>
+              <Link
+                to="/contact"
+                className="block py-2 text-white"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+            </nav>
+          )}
+        </div>
       </header>
+
+      {/* Contact Button */}
+      {/* <div className="bg-[#080F3B] py-4">
+        <div className="container mx-auto px-4 flex justify-center">
+          <button className="w-full md:w-auto text-black font-medium bg-[#fea116] px-8 py-3 hover:bg-[#e99015] transition-colors rounded">
+            Contact
+          </button>
+        </div>
+      </div> */}
     </main>
   );
 };

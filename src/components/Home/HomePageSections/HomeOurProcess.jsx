@@ -14,7 +14,7 @@ const HomeOurProcess = () => {
   ];
 
   return (
-    <section className="bg-[#F9FAFB] py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+    <section className="bg-[#F9FAFB]  px-4 sm:px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#080F3B] mb-8 sm:mb-12">
           Our Process

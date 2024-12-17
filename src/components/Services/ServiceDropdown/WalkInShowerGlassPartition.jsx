@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from "../../../assets/About_Us/djglassaboutusBannerimage.webp";
+import bgImg from "../../../assets/Walk_in_shower/walk_in_shower_BG.webp";
 import profileGlass1 from "../../../assets/Walk_in_shower/1.webp";
 import profileGlass2 from "../../../assets/Walk_in_shower/2.webp";
 import profileGlass3 from "../../../assets/Walk_in_shower/3.webp";
@@ -68,6 +68,28 @@ const WalkInShowerGlassPartition = () => {
 
       {/* Lower Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        {/* Mobile Carousal */}
+        <div className="lg:hidden flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
+          <Carousel
+            showArrows={true}
+            autoPlay={true}
+            infiniteLoop={true}
+            showThumbs={false}
+            showStatus={false}
+            className="w-full h-full"
+          >
+            {imageArray.map((image) => (
+              <div key={image.imageID} className="h-full">
+                <img
+                  src={image.imageURL}
+                  alt={image.altText}
+                  className="object-cover h-full w-full"
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div className="flex flex-col gap-6">
             <p className="text-base sm:text-lg">
@@ -109,7 +131,7 @@ const WalkInShowerGlassPartition = () => {
               </button>
             </div>
           </div>
-          <div className=" flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full">
+          <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
             <Carousel
               showArrows={true}
               autoPlay={true}

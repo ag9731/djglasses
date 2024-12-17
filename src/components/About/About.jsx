@@ -8,15 +8,15 @@ import HomeOurProcess from '../Home/HomePageSections/HomeOurProcess'
 
 const About = () => {
   return (
-    <section className='flex flex-col'>
-        <AboutUsPageBannerSection/>
-        <AboutUsPageSection2/>
-        <AboutUsMissionVission/>
-        <HomeOurProcess/>
-        <AboutUsWhyChooseUsSection/>
-        {/* <AboutUsOurProcess/> */}
+    <section className="flex flex-col">
+      <AboutUsPageBannerSection/>
+      <AboutUsPageSection2 />
+      <AboutUsMissionVission />
+      <HomeOurProcess />
+      {/* <AboutUsWhyChooseUsSection/> */}
+      {/* <AboutUsOurProcess/> */}
     </section>
-  )
+  );
 }
 
 export default About
