@@ -98,10 +98,18 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <Link to="/" className="text-white hover:text-[#fea116]">
+              <Link
+                to="/"
+                className="text-white hover:text-[#fea116]"
+                onClick={() => setServicesOpen(false)}
+              >
                 Home
               </Link>
-              <Link to="/about" className="text-white hover:text-[#fea116]">
+              <Link
+                to="/about"
+                className="text-white hover:text-[#fea116]"
+                onClick={() => setServicesOpen(false)}
+              >
                 About
               </Link>
               <div className="relative group">
@@ -131,10 +139,18 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <Link to="/gallery" className="text-white hover:text-[#fea116]">
+              <Link
+                to="/gallery"
+                className="text-white hover:text-[#fea116]"
+                onClick={() => setServicesOpen(false)}
+              >
                 Gallery
               </Link>
-              <Link to="/contact" className="text-white hover:text-[#fea116]">
+              <Link
+                to="/contact"
+                className="text-white hover:text-[#fea116]"
+                onClick={() => setServicesOpen(false)}
+              >
                 Contact
               </Link>
             </nav>
