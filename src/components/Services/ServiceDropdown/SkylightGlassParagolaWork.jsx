@@ -6,6 +6,7 @@ import profileGlass3 from "../../../assets/Skylight_Glass/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const SkylightGlassParagolaWork = () => {
   const imageArray = [
@@ -124,9 +125,11 @@ const SkylightGlassParagolaWork = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden  lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/MS_Gate_&_Fabrication_Works/msGate.webp";
 import profileGlass1 from "../../../assets/MS_Gate_&_Fabrication_Works/1.webp";
 import profileGlass2 from "../../../assets/MS_Gate_&_Fabrication_Works/2.webp";
@@ -6,51 +6,49 @@ import profileGlass3 from "../../../assets/MS_Gate_&_Fabrication_Works/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const MSGateandFabricationWork = () => {
-
   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Residential Properties",
-          appDesc:
-            "Secure and stylish entrance gates for your home, offering privacy and enhancing curb appeal.",
-        },
-        {
-          appName: "Commercial Properties",
-          appDesc:
-            "Heavy-duty gates for offices, warehouses, and business premises, providing reliable security and a professional look.",
-        },
-        {
-          appName: "Security Fences",
-          appDesc:
-            "Robust fencing systems for added security around properties, schools, parks, and other locations where safety is a top priority.",
-        },
-        {
-          appName: "Custom Fabrications",
-          appDesc:
-            "Railings, grills, and other metal fabrications tailored to your specific needs, adding functionality and style to your space.",
-        },
-      ];
-  
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
+
+  const application = [
+    {
+      appName: "Residential Properties",
+      appDesc:
+        "Secure and stylish entrance gates for your home, offering privacy and enhancing curb appeal.",
+    },
+    {
+      appName: "Commercial Properties",
+      appDesc:
+        "Heavy-duty gates for offices, warehouses, and business premises, providing reliable security and a professional look.",
+    },
+    {
+      appName: "Security Fences",
+      appDesc:
+        "Robust fencing systems for added security around properties, schools, parks, and other locations where safety is a top priority.",
+    },
+    {
+      appName: "Custom Fabrications",
+      appDesc:
+        "Railings, grills, and other metal fabrications tailored to your specific needs, adding functionality and style to your space.",
+    },
+  ];
 
   return (
     <main>
@@ -126,9 +124,11 @@ const MSGateandFabricationWork = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -180,6 +180,6 @@ const MSGateandFabricationWork = () => {
       </section>
     </main>
   );
-}
+};
 
-export default MSGateandFabricationWork
+export default MSGateandFabricationWork;

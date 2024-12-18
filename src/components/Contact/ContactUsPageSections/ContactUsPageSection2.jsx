@@ -23,12 +23,12 @@ const ContactUsPageSection2 = () => {
               <div className="flex items-center border border-solid p-3 rounded-lg">
                 <FaBlenderPhone className="bg-[#080F3B] text-white text-xl sm:text-2xl p-2 rounded-full mr-4" />
                 <span className="w-px bg-gray-300 h-8 mr-4"></span>
-                <p className="text-sm sm:text-base">+91 93801 28840</p>
+                <p className="text-sm sm:text-base">+91 95911 81111</p>
               </div>
               <div className="flex items-center border border-solid p-3 rounded-lg">
                 <FaEnvelope className="bg-[#080F3B] text-white text-xl sm:text-2xl p-2 rounded-full mr-4" />
                 <span className="w-px bg-gray-300 h-8 mr-4"></span>
-                <p className="text-sm sm:text-base">djglass@gmail.com</p>
+                <p className="text-sm sm:text-base">Info@djglass.in</p>
               </div>
               <div className="flex items-center border border-solid p-3 rounded-lg">
                 <FaLocationDot className="bg-[#080F3B] text-white text-xl sm:text-2xl p-2 rounded-full mr-4 flex-shrink-0" />

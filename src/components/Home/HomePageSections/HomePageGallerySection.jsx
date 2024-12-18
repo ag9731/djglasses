@@ -3,6 +3,7 @@ import img1 from "../../../assets/Gallery/galleryImages/1.webp";
 import img2 from "../../../assets/Gallery/galleryImages/2.webp";
 import img3 from "../../../assets/Gallery/galleryImages/3.webp";
 import img4 from "../../../assets/Gallery/galleryImages/4.webp";
+import { Link } from "react-router-dom";
 
 const HomePageGallerySection = () => {
   const gallery = [img1, img2, img3, img4];
@@ -54,9 +55,11 @@ const HomePageGallerySection = () => {
         ))}
       </div>
       <div className="flex items-center justify-center mt-8 md:mt-12">
-        <button className="text-white font-medium bg-[#080F3B] px-6 sm:px-8 md:px-14 py-2 sm:py-3 md:py-4 hover:bg-[#e99015] transition-colors rounded-md text-sm sm:text-base">
-          Explore More
-        </button>
+        <Link to="/gallery">
+          <button className="text-white font-medium bg-[#080F3B] px-6 sm:px-8 md:px-14 py-2 sm:py-3 md:py-4 hover:bg-[#e99015] transition-colors rounded-md text-sm sm:text-base">
+            Explore More
+          </button>
+        </Link>
       </div>
       {currentIndex !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">

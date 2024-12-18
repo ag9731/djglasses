@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/Shower_Open_Door/shower_glass_openableBG.webp";
 import profileGlass1 from "../../../assets/Shower_Open_Door/1.webp";
 import profileGlass2 from "../../../assets/Shower_Open_Door/2.webp";
@@ -6,51 +6,49 @@ import profileGlass3 from "../../../assets/Shower_Open_Door/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const ShowerGlassPartitionOpenable = () => {
-
   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Traditional Bathroom Designs",
-          appDesc:
-            "Openable glass partitions are ideal for spacious bathrooms, providing easy access and a sleek look.",
-        },
-        {
-          appName: "Spacious Bathrooms",
-          appDesc:
-            "Openable glass partitions are perfect for spacious bathrooms, offering easy access and a sleek, clean look.",
-        },
-        {
-          appName: "Luxury Bathrooms",
-          appDesc:
-            "The openable partition adds a modern, luxurious touch to elevate the design of any bathroom.",
-        },
-        {
-          appName: "Commercial Use",
-          appDesc:
-            "Our openable glass partitions offer functionality and elegance, ideal for large bathrooms in hotels, spas, and gyms.",
-        },
-      ];
-  
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
+
+  const application = [
+    {
+      appName: "Traditional Bathroom Designs",
+      appDesc:
+        "Openable glass partitions are ideal for spacious bathrooms, providing easy access and a sleek look.",
+    },
+    {
+      appName: "Spacious Bathrooms",
+      appDesc:
+        "Openable glass partitions are perfect for spacious bathrooms, offering easy access and a sleek, clean look.",
+    },
+    {
+      appName: "Luxury Bathrooms",
+      appDesc:
+        "The openable partition adds a modern, luxurious touch to elevate the design of any bathroom.",
+    },
+    {
+      appName: "Commercial Use",
+      appDesc:
+        "Our openable glass partitions offer functionality and elegance, ideal for large bathrooms in hotels, spas, and gyms.",
+    },
+  ];
 
   return (
     <main>
@@ -127,9 +125,11 @@ const ShowerGlassPartitionOpenable = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -181,6 +181,6 @@ const ShowerGlassPartitionOpenable = () => {
       </section>
     </main>
   );
-}
+};
 
-export default ShowerGlassPartitionOpenable
+export default ShowerGlassPartitionOpenable;

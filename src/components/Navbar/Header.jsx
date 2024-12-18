@@ -75,7 +75,7 @@ const Header = () => {
           <span className="hidden md:block w-[1px] h-6 bg-yellow-400"></span>
           <div className="flex items-center gap-2 md:gap-5">
             <FaMobileAlt />
-            <h1 className="text-sm md:text-base">Call Us: +91 93801 28840</h1>
+            <h1 className="text-sm md:text-base">Call Us: +91 95911 81111</h1>
           </div>
         </div>
 

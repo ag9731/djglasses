@@ -13,8 +13,8 @@ const Footer = () => {
             DJ Glass Interiors, led by Mr. Umesh, specializes in quality office
             partitions and glass replacement.
           </p>
-          <p className="mb-2">Mobile Number: +91 93801 28840</p>
-          <p>Email: djglass@gmail.com</p>
+          <p className="mb-2">Mobile Number: +91 95911 81111</p>
+          <p>Email: Info@djglass.in</p>
         </div>
 
         {/* 2nd Column - Quick Links */}
@@ -77,8 +77,6 @@ const Footer = () => {
                 Spider Glazing Work
               </Link>
             </li>
-            
-            
           </ul>
         </div>
 

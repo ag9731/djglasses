@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/SS_Glass_Railings/ss_glass_railing_work.webp";
 import profileGlass1 from "../../../assets/SS_Glass_Railings/1.webp";
 import profileGlass2 from "../../../assets/SS_Glass_Railings/2.webp";
@@ -6,49 +6,48 @@ import profileGlass3 from "../../../assets/SS_Glass_Railings/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const SSGlassRailingWork = () => {
-
   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Balconies",
-          appDesc:
-            "Enhance the appearance of balconies with a sleek, minimalist look that provides clear views and open space.",
-        },
-        {
-          appName: "Terraces",
-          appDesc:
-            "Provide safety while preserving the openness of your terrace or rooftop area with elegant SS glass railings.",
-        },
-        {
-          appName: "Dressing Rooms",
-          appDesc: "",
-        },
-        {
-          appName: "Commercial Spaces",
-          appDesc:
-            "Perfect for offices, malls, hotels, and other commercial buildings where aesthetics and safety are key priorities.",
-        },
-      ];
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
+
+  const application = [
+    {
+      appName: "Balconies",
+      appDesc:
+        "Enhance the appearance of balconies with a sleek, minimalist look that provides clear views and open space.",
+    },
+    {
+      appName: "Terraces",
+      appDesc:
+        "Provide safety while preserving the openness of your terrace or rooftop area with elegant SS glass railings.",
+    },
+    {
+      appName: "Dressing Rooms",
+      appDesc: "",
+    },
+    {
+      appName: "Commercial Spaces",
+      appDesc:
+        "Perfect for offices, malls, hotels, and other commercial buildings where aesthetics and safety are key priorities.",
+    },
+  ];
 
   return (
     <main>
@@ -126,9 +125,11 @@ const SSGlassRailingWork = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -180,6 +181,6 @@ const SSGlassRailingWork = () => {
       </section>
     </main>
   );
-}
+};
 
-export default SSGlassRailingWork
+export default SSGlassRailingWork;

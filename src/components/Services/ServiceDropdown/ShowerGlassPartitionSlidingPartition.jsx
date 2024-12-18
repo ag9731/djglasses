@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/Shower_Glass_Sliding_Partition/Shower_Glass Partition_Sliding_Partition_BG.webp";
 import profileGlass1 from "../../../assets/Shower_Glass_Sliding_Partition/1.webp";
 import profileGlass2 from "../../../assets/Shower_Glass_Sliding_Partition/2.webp";
@@ -6,50 +6,49 @@ import profileGlass3 from "../../../assets/Shower_Glass_Sliding_Partition/3.webp
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const ShowerGlassPartitionSlidingPartition = () => {
-
   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Bathrooms",
-          appDesc:
-            "Create a spa-like experience in your bathroom with our stylish LED touch mirrors.",
-        },
-        {
-          appName: "Vanity Areas",
-          appDesc:
-            "Perfect for your vanity table to apply makeup or style your hair with clear, bright lighting.",
-        },
-        {
-          appName: "Dressing Rooms",
-          appDesc:
-            "Ideal for personal spaces where you need a clear reflection with ambient lighting.",
-        },
-        {
-          appName: "Hotel Rooms",
-          appDesc:
-            " Enhance the guest experience by installing our LED mirrors in hotel bathrooms or rooms.",
-        },
-      ];
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
+
+  const application = [
+    {
+      appName: "Bathrooms",
+      appDesc:
+        "Create a spa-like experience in your bathroom with our stylish LED touch mirrors.",
+    },
+    {
+      appName: "Vanity Areas",
+      appDesc:
+        "Perfect for your vanity table to apply makeup or style your hair with clear, bright lighting.",
+    },
+    {
+      appName: "Dressing Rooms",
+      appDesc:
+        "Ideal for personal spaces where you need a clear reflection with ambient lighting.",
+    },
+    {
+      appName: "Hotel Rooms",
+      appDesc:
+        " Enhance the guest experience by installing our LED mirrors in hotel bathrooms or rooms.",
+    },
+  ];
 
   return (
     <main>
@@ -124,9 +123,11 @@ const ShowerGlassPartitionSlidingPartition = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -178,6 +179,6 @@ const ShowerGlassPartitionSlidingPartition = () => {
       </section>
     </main>
   );
-}
+};
 
-export default ShowerGlassPartitionSlidingPartition
+export default ShowerGlassPartitionSlidingPartition;

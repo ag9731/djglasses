@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/Spider_Glazing_Work/spider-glass-glazing-workBG.webp";
 import profileGlass1 from "../../../assets//Spider_Glazing_Work/1.webp";
 import profileGlass2 from "../../../assets//Spider_Glazing_Work/2.webp";
@@ -6,52 +6,49 @@ import profileGlass3 from "../../../assets//Spider_Glazing_Work/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const SpiderGlazingWork = () => {
+  const imageArray = [
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
 
-
-   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Commercial Buildings",
-          appDesc:
-            "Spider glazing is used in commercial projects for sleek design and natural light.",
-        },
-        {
-          appName: "Skylights and Roof Glazing",
-          appDesc:
-            "Spider glazing in skylights boosts natural light and offers expansive sky views with strong structural integrity.",
-        },
-        {
-          appName: "Facades and Curtain Walls",
-          appDesc:
-            "Spider glazing creates a striking, modern facade and functional curtain wall for high-rise buildings.",
-        },
-        {
-          appName: "Entrances and Lobbies",
-          appDesc:
-            "Spider glazing enhances building entryways and lobbies, boosting light flow and aesthetics.",
-        },
-      ];
-  
+  const application = [
+    {
+      appName: "Commercial Buildings",
+      appDesc:
+        "Spider glazing is used in commercial projects for sleek design and natural light.",
+    },
+    {
+      appName: "Skylights and Roof Glazing",
+      appDesc:
+        "Spider glazing in skylights boosts natural light and offers expansive sky views with strong structural integrity.",
+    },
+    {
+      appName: "Facades and Curtain Walls",
+      appDesc:
+        "Spider glazing creates a striking, modern facade and functional curtain wall for high-rise buildings.",
+    },
+    {
+      appName: "Entrances and Lobbies",
+      appDesc:
+        "Spider glazing enhances building entryways and lobbies, boosting light flow and aesthetics.",
+    },
+  ];
 
   return (
     <main>
@@ -129,9 +126,11 @@ const SpiderGlazingWork = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -183,6 +182,6 @@ const SpiderGlazingWork = () => {
       </section>
     </main>
   );
-}
+};
 
-export default SpiderGlazingWork
+export default SpiderGlazingWork;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bgImg from "../../../assets/Walk_in_shower/walk_in_shower_BG.webp";
 import profileGlass1 from "../../../assets/Walk_in_shower/1.webp";
 import profileGlass2 from "../../../assets/Walk_in_shower/2.webp";
@@ -6,50 +6,49 @@ import profileGlass3 from "../../../assets/Walk_in_shower/3.webp";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const WalkInShowerGlassPartition = () => {
-
   const imageArray = [
-        {
-          imageID: 1,
-          imageURL: profileGlass1,
-          altText: "Profile Toughened Glass Partition 1",
-        },
-        {
-          imageID: 2,
-          imageURL: profileGlass2,
-          altText: "Profile Toughened Glass Partition 2",
-        },
-        {
-          imageID: 3,
-          imageURL: profileGlass3,
-          altText: "Profile Toughened Glass Partition 3",
-        },
-      ];
-    
-    
-      const application = [
-        {
-          appName: "Modern Bathrooms",
-          appDesc:
-            "Ideal for contemporary homes, the frameless design offers a sleek, minimalist look that suits any bathroom style.",
-        },
-        {
-          appName: "Luxury Bathrooms",
-          appDesc:
-            "A walk-in shower with large glass panels creates a luxurious, resort-style bathroom.",
-        },
-        {
-          appName: "Accessible Bathrooms",
-          appDesc:
-            "A walk-in shower offers easy accessibility, with no steps or doors, perfect for all, including the elderly or disabled.",
-        },
-        {
-          appName: "Open Concept Spaces",
-          appDesc:
-            "Ideal for open-concept bathrooms, openable glass partitions maintain flow while defining the shower area.",
-        },
-      ];
+    {
+      imageID: 1,
+      imageURL: profileGlass1,
+      altText: "Profile Toughened Glass Partition 1",
+    },
+    {
+      imageID: 2,
+      imageURL: profileGlass2,
+      altText: "Profile Toughened Glass Partition 2",
+    },
+    {
+      imageID: 3,
+      imageURL: profileGlass3,
+      altText: "Profile Toughened Glass Partition 3",
+    },
+  ];
+
+  const application = [
+    {
+      appName: "Modern Bathrooms",
+      appDesc:
+        "Ideal for contemporary homes, the frameless design offers a sleek, minimalist look that suits any bathroom style.",
+    },
+    {
+      appName: "Luxury Bathrooms",
+      appDesc:
+        "A walk-in shower with large glass panels creates a luxurious, resort-style bathroom.",
+    },
+    {
+      appName: "Accessible Bathrooms",
+      appDesc:
+        "A walk-in shower offers easy accessibility, with no steps or doors, perfect for all, including the elderly or disabled.",
+    },
+    {
+      appName: "Open Concept Spaces",
+      appDesc:
+        "Ideal for open-concept bathrooms, openable glass partitions maintain flow while defining the shower area.",
+    },
+  ];
 
   return (
     <main>
@@ -126,9 +125,11 @@ const WalkInShowerGlassPartition = () => {
               </ul>
             </div>
             <div>
-              <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
-                Book Now
-              </button>
+              <Link to="/contact">
+                <button className="mt-6 w-full sm:w-auto text-white font-medium bg-[#080F3B] px-6 sm:px-8 py-3 sm:py-4 hover:bg-[#e99015] transition-colors">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:flex justify-center lg:justify-end h-[300px] sm:h-[400px] lg:h-full border-b-4">
@@ -180,6 +181,6 @@ const WalkInShowerGlassPartition = () => {
       </section>
     </main>
   );
-}
+};
 
-export default WalkInShowerGlassPartition
+export default WalkInShowerGlassPartition;
